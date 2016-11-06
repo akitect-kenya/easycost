@@ -1,70 +1,55 @@
-@extends('layouts.app')
+@extends('auth.layouts.base')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Reset Password</div>
+    <form class="fs_split_flex_wrapper" method="POST" action="{{ url('/password/reset') }}">
+        {{ csrf_field() }}
 
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/password/reset') }}">
-                        {{ csrf_field() }}
+        <input type="hidden" name="token" value="{{ $token }}">
 
-                        <input type="hidden" name="token" value="{{ $token }}">
+        <div class="fs_split_mini_header mini align_center small_padding full_width bottom_border">
+            <span>Do not have an account? </span>
+            <a href="http://app.skoolspace.com/register" class="underline flat_grey">Create an account</a>
+        </div>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ $email or old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-
-                                @if ($errors->has('password_confirmation'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    Reset Password
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+        <div class="fs_split_body" style="margin-top: 150px;">
+            <h1>Reset Password</h1>
+            <p class="ghost_white">
+                (Help you get the right price)
+            </p>
+            <div class="input_wrapper email form-group">
+                <p class="input_overlay"></p>
+                <input required
+                       autofocus
+                       name="email"
+                       type="email"
+                       class="form-control"
+                       value="{{ $email or old('email') }}"
+                       placeholder="example@unliever.com">
+            </div>
+            <div class="input_wrapper form-group">
+                <p class="input_overlay"></p>
+                <input required
+                       type="password"
+                       name="password"
+                       class="form-control"
+                       placeholder="New password">
+            </div>
+            <div class="input_wrapper form-group">
+                <p class="input_overlay"></p>
+                <input required
+                       type="password"
+                       name="password_confirmation"
+                       class="form-control"
+                       placeholder="Repeat password">
             </div>
         </div>
-    </div>
-</div>
+
+        <div class="fs_split_footer submits">
+            <div class="button_container">
+                <button type="submit" id="submit_btn" class="btn btn_large">
+                    <span>Reset Password</span>
+                </button>
+            </div>
+        </div>
+    </form>
 @endsection
