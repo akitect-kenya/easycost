@@ -22,6 +22,20 @@
     </script>
 </head>
 <body>
+    <style>
+        html, #app {
+            color: #007dbb !important;
+        }
+
+        .panel-default>.panel-heading {
+            color: #007dbb !important;
+        }
+
+        .dropdown-menu>li>a {
+            color: #007dbb !important;
+        }
+    </style>
+
     <div id="app">
         <nav class="blue navbar navbar-default navbar-static-top">
             <div class="container">
@@ -79,15 +93,6 @@
             </div>
         </nav>
 
-        <style>
-            html, #app {
-                color: #007dbb !important;
-            }
-
-            .panel-default>.panel-heading {
-                color: #007dbb !important;
-            }
-        </style>
         @yield('content')
     </div>
 
