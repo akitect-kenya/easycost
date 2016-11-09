@@ -79,6 +79,15 @@
             </div>
         </nav>
 
+        <style>
+            html, #app {
+                color: #007dbb !important;
+            }
+
+            .panel-default>.panel-heading {
+                color: #007dbb !important;
+            }
+        </style>
         @yield('content')
     </div>
 
