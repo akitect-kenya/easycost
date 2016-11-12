@@ -1,0 +1,40 @@
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #fff;
+    background-color: #007dbb;
+    border: 1px solid #007dbb;
+    border-bottom-color: transparent;
+    cursor: default;
+}
+
+.header {
+    border-bottom: 1px solid;
+    margin-top: -23px;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+}
+.header .selector {
+    border: 0;
+    width: 24%;
+    height: 45px;
+}
+
+.workspace {
+    margin-top: 50px;
+}
+
+.workspace .heading, .workspace .heading h3 {
+    text-align: center;
+}
+
+.sheet {
+    margin-top: 25px;
+}
+
+.sheet h4 {
+    text-align: center;
+}
+
+td .field {
+    border: 0;
+}

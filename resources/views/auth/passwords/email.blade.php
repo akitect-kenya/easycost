@@ -12,7 +12,7 @@
         <div class="fs_split_body" style="margin-top: 150px;">
             <h1>Reset Password</h1>
             <p class="ghost_white">
-                (Get a link to create your new password)
+
             </p>
             <div class="input_wrapper email form-group">
                 <p class="input_overlay"></p>

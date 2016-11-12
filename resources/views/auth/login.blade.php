@@ -7,7 +7,7 @@
         <div class="fs_split_body" style="margin-top: 150px;">
             <h1>Welcome to EasyCost</h1>
             <p class="ghost_white">
-                (Help you get the right price)
+
             </p>
             <div class="input_wrapper email form-group">
                 <p class="input_overlay"></p>
