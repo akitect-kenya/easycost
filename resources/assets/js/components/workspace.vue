@@ -354,7 +354,12 @@
                     </div>
                     <div class="row col-md-12" style="float: right;">
                         <span class="pull-right">
-                            <a :class="costingSaveClass" @click="saveSheet()" class="btn btn-primary">Save</a>
+                            <a :class="costingSaveClass"
+                               autocomplete="off"
+                               @click="saveSheet()"
+                               class="btn btn-primary"
+                               data-loading-text="Saving..."
+                               id="costingSaveBtn">Save</a>
                             <button @click="resetSheet()" class="btn btn-default">Cancel</button>
                         </span>
                     </div>

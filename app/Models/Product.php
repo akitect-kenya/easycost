@@ -18,7 +18,7 @@ class Product extends Model
      *
      * @var array
      */
-    protected $hidden = ['id', 'sheet_id', 'created_at', 'updated_at'];
+    protected $hidden = ['sheet_id', 'created_at', 'updated_at'];
 
     /**
      * Links to the product's sheet
