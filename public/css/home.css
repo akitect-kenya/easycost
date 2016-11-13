@@ -19,11 +19,8 @@
     height: 45px;
 }
 
-.workspace {
-    margin-top: 50px;
-}
-
-.workspace .heading, .workspace .heading h3 {
+.heading, .heading h3 {
+    margin-top: 35px;
     text-align: center;
 }
 
@@ -37,4 +34,8 @@
 
 td .field {
     border: 0;
+}
+
+.single-workspace {
+    padding-top: 20px;
 }

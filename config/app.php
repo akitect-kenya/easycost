@@ -163,13 +163,12 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-        Zizaco\Entrust\EntrustServiceProvider::class,
-
         /*
          * Package Service Providers...
          */
 
-        //
+        Zizaco\Entrust\EntrustServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -229,6 +228,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
+        'Excel'     => Maatwebsite\Excel\Facades\Excel::class
     ],
 
 ];

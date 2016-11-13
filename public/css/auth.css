@@ -27,6 +27,12 @@ p {
     box-sizing: border-box
 }
 
+#signup_graphics .item img{
+    display: block;
+    width: 100%;
+    height: 520px;
+}
+
 .white {
     background: #fff;
 }
@@ -193,8 +199,8 @@ p {
 }
 
 #signup_graphics_pane[data-step=signin] #signup_graphics {
-    background-image: url(../images/logo.svg);
-    color: #f8f8ff
+//background-image: url(../images/logo.svg);
+    color: #007dbb
 }
 
 #signup_graphics_pane[data-step=reset] #signup_graphics {

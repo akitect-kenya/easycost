@@ -22,8 +22,8 @@
             'csrfToken' => csrf_token(),
         ]); ?>
     </script>
-</head>
-<body>
+
+    <!-- Styles -->
     <style>
         html, #app {
             color: #007dbb !important;
@@ -38,6 +38,8 @@
         }
     </style>
 
+</head>
+<body>
     <div id="app">
         <nav class="blue navbar navbar-default navbar-static-top">
             <div class="container">
