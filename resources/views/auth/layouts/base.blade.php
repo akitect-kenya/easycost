@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="{{ asset('/css/auth.css') }}">
 
     <!-- Important Owl stylesheet -->
-    <link rel="stylesheet" href="owl/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="{{ asset('owl/owl-carousel/owl.carousel.css') }}">
 
     <!-- Default Theme -->
-    <link rel="stylesheet" href="owl/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="{{ asset('owl/owl-carousel/owl.theme.css') }}">
 
     <title>EasyCost</title>
 </head>
@@ -36,7 +36,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
     <!-- Include js plugin -->
-    <script src="owl/owl-carousel/owl.carousel.js"></script>
+    <script src="{{ asset('owl/owl-carousel/owl.carousel.js') }}"></script>
     <script>
         $(document).ready(function() {
             $("#signup_graphics").owlCarousel({
