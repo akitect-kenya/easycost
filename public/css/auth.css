@@ -55,7 +55,7 @@ p {
 }
 
 .fs_split .fs_split_pane {
-    height: 100%;
+    height: 80%;
     transition: background-color .2s ease-out 0s
 }
 
@@ -78,16 +78,18 @@ p {
 }
 
 .fs_split .logo_area{
-    margin: 1rem;
-    width: 90pt;
-    height: 37px;
-    /*background: url(../images/logo.svg) no-repeat;*/
+    width: 100%;
+    margin: 0;
+    height: 20%;
+    background: #007dbb;
     background-size: contain
 }
 
-.logo_area img {
+.logo_area .logo {
     float: right;
-    height: 37px;
+    height: 67px;
+    padding: 5px;
+    background-color: #fff;
 }
 
 .fs_split_pane_left .fs_split_header {

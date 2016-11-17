@@ -11,7 +11,7 @@
             <a href="http://app.skoolspace.com/register" class="underline flat_grey">Create an account</a>
         </div>
 
-        <div class="fs_split_body" style="margin-top: 150px;">
+        <div class="fs_split_body" style="margin-top: 50px;">
             <h1>Reset Password</h1>
             <p class="ghost_white">
 

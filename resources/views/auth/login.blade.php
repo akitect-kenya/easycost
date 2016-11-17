@@ -4,7 +4,7 @@
     <form id="loginForm" novalidate class="fs_split_flex_wrapper" method="POST" action="{{ url('/login') }}">
         {{ csrf_field() }}
 
-        <div class="fs_split_body" style="margin-top: 150px;">
+        <div class="fs_split_body" style="margin-top: 50px;">
             <h1>Welcome to EasyCost</h1>
             <p class="ghost_white">
 

@@ -23,7 +23,9 @@ class CreateProductsTable extends Migration
             $table->string('batch_no');
             $table->double('cost');
 
-            $table->integer('sheet_id');
+            $table->integer('sheet_id')->unsigned();
+            $table->foreign('sheet_id')->references('id')->on('sheets')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

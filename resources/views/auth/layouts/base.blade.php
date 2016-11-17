@@ -19,6 +19,10 @@
     <div class="no_header full_bleed full_height no_margin">
         <div class="full_height fs_split">
             <!-- Authentication Form -->
+            <div class="logo_area">
+                <img src="{{ asset('images/logo.svg') }}" alt="Logo" class="logo">
+            </div>
+
             <div class="fs_split_pane fs_split_pane_left">
                 @yield('content')
             </div>

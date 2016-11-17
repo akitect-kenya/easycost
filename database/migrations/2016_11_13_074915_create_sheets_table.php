@@ -16,7 +16,10 @@ class CreateSheetsTable extends Migration
         Schema::create('sheets', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('good_id');
+
+            $table->integer('good_id')->unsigned();
+            $table->foreign('good_id')->references('id')->on('goods')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

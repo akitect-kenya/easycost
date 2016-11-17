@@ -9,7 +9,7 @@
             <a href="{{ url('/login') }}" class="underline flat_grey">Login</a>
         </div>
 
-        <div class="fs_split_body" style="margin-top: 150px;">
+        <div class="fs_split_body" style="margin-top: 50px;">
             <h1>Reset Password</h1>
             <p class="ghost_white">
 

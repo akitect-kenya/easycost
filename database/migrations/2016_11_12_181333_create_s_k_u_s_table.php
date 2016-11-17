@@ -16,7 +16,10 @@ class CreateSKUsTable extends Migration
         Schema::create('s_k_u_s', function (Blueprint $table) {
             $table->increments('id');
             $table->string('size');
-            $table->integer('good_id');
+
+            $table->integer('good_id')->unsigned();
+            $table->foreign('good_id')->references('id')->on('goods')->onDelete('cascade');
+
             $table->timestamps();
         });
     }
