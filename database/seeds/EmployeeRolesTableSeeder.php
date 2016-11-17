@@ -14,6 +14,11 @@ class EmployeeRolesTableSeeder extends Seeder
             'email' => 'accountant@unilever.com',
             'role' => 'accountant'
         ),
+
+        array(
+            'email' => 'kamausamuel11@gmail.com',
+            'role' => 'accountant'
+        ),
     ];
 
     /**

@@ -20,6 +20,12 @@ class EmployeesTableSeeder extends Seeder
             'name' => 'Accountant one',
             'email' => 'accountant@unilever.com',
             'password' => 'password'
+        ),
+
+        array(
+            'name' => 'Kamau Samuel Kubai',
+            'email' => 'kamausamuel11@gmail.com',
+            'password' => 'password'
         )
     ];
 
