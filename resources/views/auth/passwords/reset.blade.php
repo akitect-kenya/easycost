@@ -42,6 +42,11 @@
                        class="form-control"
                        placeholder="Repeat password">
             </div>
+            <label>
+                <a class="ghost_white" href="{{ url('/login') }}">
+                    <span class="normal">Back to </span>login<span class="normal">?</span>
+                </a>
+            </label>
         </div>
 
         <div class="fs_split_footer submits">

@@ -18,34 +18,13 @@
 <body class="fullbleed">
     <div class="no_header full_bleed full_height no_margin">
         <div class="full_height fs_split">
-
             <!-- Authentication Form -->
             <div class="fs_split_pane fs_split_pane_left">
                 @yield('content')
             </div>
-            <!-- End of the Authentication Form -->
-
-            <!-- Auth right side -->
-            <div id="signup_graphics_pane" class="fs_split_pane fs_split_pane_right" data-step="signin">
-                @include('auth.partials._auth-right-side')
-            </div>
-            <!-- End of the Auth right side -->
         </div>
     </div>
     <!--  jQuery 1.7+  -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-
-    <!-- Include js plugin -->
-    <script src="{{ asset('owl/owl-carousel/owl.carousel.js') }}"></script>
-    <script>
-        $(document).ready(function() {
-            $("#signup_graphics").owlCarousel({
-                navigation : false,
-                slideSpeed : 300,
-                paginationSpeed : 400,
-                singleItem:true
-            });
-        });
-    </script>
 </body>
 </html>

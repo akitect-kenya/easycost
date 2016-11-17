@@ -62,9 +62,9 @@ p {
 .fs_split_pane_left {
     background-color: #007dbb;
     color: #fff;
-    width: 40%;
-    min-width: 486px;
-    max-width: 39pc;
+    width: 100%;
+    min-width: initial;
+    max-width: initial;
     float: left;
     z-index: 1;
     word-wrap: break-word
@@ -81,8 +81,13 @@ p {
     margin: 1rem;
     width: 90pt;
     height: 37px;
-//background: url(images/logo.png) no-repeat;
+    /*background: url(../images/logo.svg) no-repeat;*/
     background-size: contain
+}
+
+.logo_area img {
+    float: right;
+    height: 37px;
 }
 
 .fs_split_pane_left .fs_split_header {
@@ -90,7 +95,7 @@ p {
 }
 
 .fs_split_pane_left .fs_split_body {
-    width: 100%
+    width: 60%
 }
 
 .fs_split .desc {
@@ -559,10 +564,11 @@ form {
         display: block !important
     }
 
+    .fs_split_pane_left .fs_split_body {
+        width: 100%
+    }
+
     .fs_split .fs_split_pane_left {
-        width: 100%;
-        min-width: initial;
-        max-width: initial;
         overflow: scroll
     }
 

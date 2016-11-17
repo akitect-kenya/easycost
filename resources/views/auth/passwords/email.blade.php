@@ -24,6 +24,11 @@
                        value="{{ $email or old('email') }}"
                        placeholder="example@unliever.com">
             </div>
+            <label>
+                <a class="ghost_white" href="{{ url('/login') }}">
+                    <span class="normal">Back to </span>login<span class="normal">?</span>
+                </a>
+            </label>
         </div>
 
         <div class="fs_split_footer submits">
