@@ -28,7 +28,8 @@
                     "sku": "",
                     "number_produced": 0,
                     "batch_no": "",
-                    "cost": 0
+                    "cost": 0,
+                    "product_name": ""
                 }
             }
         },
@@ -84,13 +85,15 @@
             },
 
             addProduct(product) {
+                product.product_name = this.currentGood.name
                 this.newSheet.products.push(product);
                 this.newProduct = {
                     "date": "",
                     "sku": "",
                     "number_produced": 0,
                     "batch_no": "",
-                    "cost": 0
+                    "cost": 0,
+                    "product_name": ""
                 }
             },
 
@@ -127,6 +130,8 @@
                 } else {
                     this.$http.post('/api/goods/' + this.currentGood.id + '/sheets', {name: this.newSheet.name}).then((response) => {
                         var sheet = response.body;
+
+                        console.log(this.newSheet);
 
                         // Save each of the products
                         this.newSheet.products.forEach((product) => {

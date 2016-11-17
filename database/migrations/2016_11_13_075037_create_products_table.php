@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
 
             $table->string('date');
             $table->string('sku');
+            $table->string('product_name');
             $table->integer('number_produced');
             $table->string('batch_no');
             $table->double('cost');

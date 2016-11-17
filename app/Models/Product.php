@@ -11,7 +11,7 @@ class Product extends Model
      *
      * @var array
      */
-    protected $fillable = ['date', 'sku', 'number_produced', 'batch_no', 'cost', 'sheet_id'];
+    protected $fillable = ['date', 'sku', 'number_produced', 'batch_no', 'cost', 'sheet_id', 'product_name'];
 
     /**
      * The fields to be hidden in the array serialization
