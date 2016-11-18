@@ -23,8 +23,8 @@ class EmployeesTableSeeder extends Seeder
         ),
 
         array(
-            'name' => 'Kamau Samuel Kubai',
-            'email' => 'kamausamuel11@gmail.com',
+            'name' => 'Faith Marion',
+            'email' => 'marionfaith68@gmail.com',
             'password' => 'password'
         )
     ];

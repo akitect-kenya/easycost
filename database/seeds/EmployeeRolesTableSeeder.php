@@ -16,7 +16,7 @@ class EmployeeRolesTableSeeder extends Seeder
         ),
 
         array(
-            'email' => 'kamausamuel11@gmail.com',
+            'email' => 'marionfaith68@gmail.com',
             'role' => 'accountant'
         ),
     ];
