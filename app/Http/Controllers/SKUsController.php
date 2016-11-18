@@ -17,4 +17,18 @@ class SKUsController extends Controller
         $skus = SKU::where('good_id', $goodId)->get();
         return response()->json($skus);
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param $goodId
+     * @param $skuId
+     * @return \Illuminate\Http\Response
+     */
+    public function show($goodId, $skuId)
+    {
+        $sku = SKU::where('good_id', $goodId)->find($skuId);
+
+        return response()->json($sku);
+    }
 }

@@ -15,35 +15,35 @@ class GoodsTableSeeder extends Seeder
             'goods' => [
                 [
                     'name' => 'Royco beef tiny cubes',
-                    'skus' => ['4g']
+                    'skus' => ['4g' => '95']
                 ],
                 [
                     'name' => 'Knorr beef tiny cubes',
-                    'skus' => ['4g']
+                    'skus' => ['4g' => '95']
                 ],
                 [
                     'name' => 'Royco Satchet',
-                    'skus' => ['70g', '200g']
+                    'skus' => ['70g' => '32', '200g' => '80']
                 ],
                 [
                     'name' => 'Royco beef tin',
-                    'skus' => ['200gm', '500gm']
+                    'skus' => ['200g' => '99', '500gm' => '240']
                 ],
                 [
                     'name' => 'Royco chicken tin',
-                    'skus' => ['200g', '500g']
+                    'skus' => ['200g' => '99', '500gm' => '240']
                 ],
                 [
                     'name' => 'Knorr chicken',
-                    'skus' => ['15g']
+                    'skus' => ['15g' => '75']
                 ],
                 [
                     'name' => 'Knorr beef',
-                    'skus' => ['15g']
+                    'skus' => ['15g' => '75']
                 ],
                 [
                     'name' => 'Knorr beef chilli',
-                    'skus' => ['15g']
+                    'skus' => ['15g' => '75']
                 ]
             ]
         ],
@@ -52,11 +52,11 @@ class GoodsTableSeeder extends Seeder
             'goods' => [
                 [
                     'name' => 'Blueband low fat',
-                    'skus' => ['100g', '250g']
+                    'skus' => ['100g' => '30', '250g' => '72']
                 ],
                 [
                     'name' => 'Blueband medium fat',
-                    'skus' => ['100g', '250g', '500g', '1kg']
+                    'skus' => ['100g' => '40', '250g' => '99', '500g' => '240', '1kg' => '315']
                 ]
             ]
         ],
@@ -65,87 +65,87 @@ class GoodsTableSeeder extends Seeder
             'goods' => [
                 [
                     'name' => 'Vaseline petroleum jelly pure original',
-                    'skus' => ['25g', '50g', '100g', '250g']
+                    'skus' => ['25ml' => '25', '50ml' => '50', '100ml' => '99', '250ml' => '185']
                 ],
                 [
                     'name' => 'Vaseline petroleum jelly baby gentle',
-                    'skus' => ['25g', '50g', '100g', '250g']
+                    'skus' => ['25ml' => '25', '50ml' => '50', '100ml' => '99', '250ml' => '185']
                 ],
                 [
                     'name' => 'Vaseline petroleum cocoa butter rich conditioning jelly',
-                    'skus' => ['100g', '250g']
+                    'skus' => ['100ml' => '110', '250ml' => '199']
                 ],
                 [
                     'name' => 'Vaseline petroleum jelly aloe fresh light hydrating',
-                    'skus' => ['100g', '250g']
+                    'skus' => ['100ml' => '110', '250ml' => '199']
                 ],
                 [
                     'name' => 'Vaseline petroleum jelly cooling men',
-                    'skus' => ['100g', '250g']
+                    'skus' => ['100ml' => '110', '250ml' => '199']
                 ],
                 [
                     'name' => 'Vaseline petroleum jelly fresh men',
-                    'skus' => ['100g', '250g']
+                    'skus' => ['100ml' => '110', '250ml' => '199']
                 ],
                 [
                     'name' => 'Vaseline lotion menbody extra strength',
-                    'skus' => ['100ml', '200ml', '400ml']
+                    'skus' => ['100ml' => '110', '200ml' => '185', '400ml' => '350']
                 ],
                 [
                     'name' => 'Vaseline lotion men repairing moisture cooling men rep fast absorbing',
-                    'skus' => ['100ml', '200ml', '400ml']
+                    'skus' => ['100ml' => '110', '200ml' => '185', '400ml' => '350']
                 ],
                 [
                     'name' => 'Vaseline lotion dry skin repair yellow',
-                    'skus' => ['100ml', '200ml', '400ml']
+                    'skus' => ['100ml' => '110', '200ml' => '185', '400ml' => '350']
                 ],
                 [
                     'name' => 'Vaseline lotion aloesoothe',
-                    'skus' => ['100ml', '200ml', '400ml']
+                    'skus' => ['100ml' => '110', '200ml' => '185', '400ml' => '350']
                 ],
                 [
                     'name' => 'Vaseline lotion advanced repair',
-                    'skus' => ['100ml', '200ml', '400ml']
+                    'skus' => ['100ml' => '110', '200ml' => '185', '400ml' => '350']
                 ],
                 [
                     'name' => 'Vaseline lotion cocoaglow',
-                    'skus' => ['100ml', '200ml', '400ml']
+                    'skus' => ['100ml' => '110', '200ml' => '185', '400ml' => '350']
                 ],
                 [
                     'name' => 'Geisha Gemiguard calming chamomile and Vit E',
-                    'skus' => ['125g', '225g']
+                    'skus' => ['125g' => '60', '225g' => '90']
                 ],
                 [
                     'name' => 'Geisha revitalising mint and green tea',
-                    'skus' => ['125g', '225g']
+                    'skus' => ['125g' => '60', '225g' => '90']
                 ],
                 [
                     'name' => 'Geisha refreshing lemon and sunflower',
-                    'skus' => ['125g', '225g']
+                    'skus' => ['125g' => '60', '225g' => '90']
                 ],
                 [
                     'name' => 'Geisha soothing neem and basil',
-                    'skus' => ['125g', '225g']
+                    'skus' => ['125g' => '60', '225g' => '90']
                 ],
                 [
                     'name' => 'Geisha rose and honey',
-                    'skus' => ['125g', '225g']
+                    'skus' => ['125g' => '60', '225g' => '90']
                 ],
                 [
                     'name' => 'Geisha coconut milk and honey',
-                    'skus' => ['100g', '125g', '225g']
+                    'skus' => ['100g' => '40', '125g' => '53', '225g' => '75']
                 ],
                 [
                     'name' => 'Geisha shea butter and verbena',
-                    'skus' => ['100g', '125g', '225g']
+                    'skus' => ['100g' => '40', '125g' => '53', '225g' => '75']
                 ],
                 [
                     'name' => 'Geisha value pack 3 get 1 free',
-                    'skus' => ['125g']
+                    'skus' => ['125g' => '140']
                 ],
                 [
                     'name' => 'Geisha value pack 2 get 1 free',
-                    'skus' => ['250g']
+                    'skus' => ['250g' => '180']
                 ]
             ]
         ],
@@ -154,23 +154,23 @@ class GoodsTableSeeder extends Seeder
             'goods' => [
                 [
                     'name' => 'Omo extra fresh for fabric conditioner',
-                    'skus' => ['100g', '200g', '500g', '1kg', '3.5kg']
+                    'skus' => ['100g' => '30', '200g' => '65', '500g' => '165', '1kg' => '290', '3.5kg' => '950']
                 ],
                 [
                     'name' => 'Omo original',
-                    'skus' => ['100g', '200g', '500g', '1kg', '3.5kg']
+                    'skus' => ['100g' => '30', '200g' => '65', '500g' => '165', '1kg' => '290', '3.5kg' => '950']
                 ],
                 [
                     'name' => 'Sunlight pink powder tropical sensations',
-                    'skus' => ['100g', '200g', '500g', '1kg', '3.5kg', '3.5kg bucket']
+                    'skus' => ['100g' => '20', '200g' => '65', '500g' => '165', '1kg' => '290', '3.5kg' => '790', '3.5kg bucket' => '860']
                 ],
                 [
                     'name' => 'Sunlight yellow powder spring sensations',
-                    'skus' => ['100g', '200g', '500g', '1kg', '3.5kg', '3.5kg bucket']
+                    'skus' => ['100g' => '20', '200g' => '65', '500g' => '165', '1kg' => '290', '3.5kg' => '790', '3.5kg bucket' => '860']
                 ],
                 [
                     'name' => 'Sunlight orange powder sunrise sensations',
-                    'skus' => ['100g', '200g', '500g', '1kg', '3.5kg', '3.5kg bucket']
+                    'skus' => ['100g' => '20', '200g' => '65', '500g' => '165', '1kg' => '290', '3.5kg' => '790', '3.5kg bucket' => '860']
                 ],
             ]
         ]
@@ -197,9 +197,10 @@ class GoodsTableSeeder extends Seeder
                 ]);
 
                 // Create the skus
-                foreach ($good['skus'] as $sku) {
+                foreach ($good['skus'] as $sku => $prize) {
                     $newgood->skus()->create([
-                        'size' => $sku
+                        'size' => $sku,
+                        'prize' => $prize
                     ]);
                 }
             }

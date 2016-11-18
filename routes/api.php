@@ -39,4 +39,5 @@ Route::get('/departments', 'DepartmentsController@index');
 Route::get('/departments/{department}/goods', 'GoodsController@index');
 Route::get('/goods/{good}', 'GoodsController@show');
 Route::get('/goods/{good}/skus', 'SKUsController@index');
+Route::get('/goods/{good}/skus/{sku}', 'SKUsController@show');
 

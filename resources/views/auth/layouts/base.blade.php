@@ -7,12 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">\
     <link rel="stylesheet" href="{{ asset('/css/auth.css') }}">
 
-    <!-- Important Owl stylesheet -->
-    <link rel="stylesheet" href="{{ asset('owl/owl-carousel/owl.carousel.css') }}">
-
-    <!-- Default Theme -->
-    <link rel="stylesheet" href="{{ asset('owl/owl-carousel/owl.theme.css') }}">
-
     <title>EasyCost</title>
 </head>
 <body class="fullbleed">
@@ -29,7 +23,7 @@
         </div>
     </div>
     <!--  jQuery 1.7+  -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('js/jquery.validate.js') }}"></script>
     <script>
         $("#loginForm").validate();

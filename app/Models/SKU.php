@@ -11,7 +11,7 @@ class SKU extends Model
      *
      * @var array
      */
-    protected $fillable = ['size', 'good_id'];
+    protected $fillable = ['size', 'price', 'good_id'];
 
     /**
      * Link to the sku's good

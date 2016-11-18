@@ -8,6 +8,13 @@
 
         data() {
             return {
+                productPackage: 20,
+                directLabourCost: 40,
+                purchaseOrders: 9400,
+                machineSetups: 16485,
+                machineTesting: 50000,
+                directMaterialCost: 40,
+                maintenanceCleansing: 23000,
                 currentSheet: {},
                 hasPreviousSheet: false,
                 hasNextSheet: false,
@@ -60,6 +67,12 @@
             return {
                 'disabled': ((this.newSheet.products.length <= 0) || (this.newSheet.name == ""))
             }
+          },
+
+          costingActionClass() {
+            return {
+                'disabled': ((this.newProduct.date == "") || (this.newProduct.sku == "") || (this.newProduct.number_produced == 0) || (this.newProduct.batch_no == ""))
+            }
           }
         },
 
@@ -85,16 +98,21 @@
             },
 
             addProduct(product) {
-                product.product_name = this.currentGood.name
-                this.newSheet.products.push(product);
-                this.newProduct = {
-                    "date": "",
-                    "sku": "",
-                    "number_produced": 0,
-                    "batch_no": "",
-                    "cost": 0,
-                    "product_name": ""
-                }
+                this.$http.get('/api/goods/' + this.currentGood.id + '/skus/' + product.sku).then((response) => {
+                    var sku = response.body;
+                    product.sku = sku.size
+                    product.product_name = this.currentGood.name
+                    product.cost = this.cost(product.number_produced, sku.prize);
+                    this.newSheet.products.push(product);
+                    this.newProduct = {
+                        "date": "",
+                        "sku": "",
+                        "number_produced": 0,
+                        "batch_no": "",
+                        "cost": 0,
+                        "product_name": ""
+                    }
+                });
             },
 
             removeProduct(product) {
@@ -209,6 +227,24 @@
                 this.$http.delete('/api/goods/' + this.currentGood.id + '/sheets/' + this.currentSheet.id).then((response) => {
                     // Do something after the sheet has been deleted
                 });
+            },
+
+            cost(units, prize) {
+                // Sales revenues
+                var salesRevenue = units * prize;
+                // Direct labour cost
+                var directLabourCosts = units * this.directLabourCost;
+                // Direct material costs
+                var directMaterialCosts = units * this.directMaterialCost;
+                // Total direct costs
+                var totalDirectCosts = directLabourCosts + directMaterialCosts;
+                // Prime Costs
+                var primeCosts = salesRevenue + totalDirectCosts;
+                // Overhead Costs
+                var overheadCosts = this.purchaseOrders + this.machineSetups + (units * this.productPackage) + this.machineTesting + this.maintenanceCleansing;
+
+                // Total Costs
+                return primeCosts + overheadCosts;
             }
         }
     }
@@ -336,7 +372,7 @@
                                 <td>
                                     <select v-model="newProduct.sku" name="sku" id="sku" class="form-control field">
                                         <option value="">SKU</option>
-                                        <option :value="sku.size" v-for="sku in skus"> {{ sku.size }} </option>
+                                        <option :value="sku.id" v-for="sku in skus"> {{ sku.size }} </option>
                                     </select>
                                 </td>
                                 <td>
@@ -349,7 +385,7 @@
                                     <input v-model="newProduct.cost" disabled name="cost" id="cost" type="text" class="form-control field">
                                 </td>
                                 <td>
-                                    <button @click="addProduct(newProduct)" class="btn btn-primary">
+                                    <button :class="costingActionClass" @click="addProduct(newProduct)" class="btn btn-primary">
                                         <i class="fa fa-check" aria-hidden="true"></i>
                                     </button>
                                 </td>

@@ -5,9 +5,12 @@
         {{ csrf_field() }}
 
         <div class="fs_split_body" style="margin-top: 50px;">
-            <h1>Welcome to EasyCost</h1>
-            <p class="ghost_white">
+            <h1>EasyCost</h1>
 
+            <p class="ghost_white" style="text-align: center">
+                @if (count($errors) > 0)
+                    Wrong credentials!
+                @endif
             </p>
             <div class="input_wrapper email form-group">
                 <p class="input_overlay"></p>
