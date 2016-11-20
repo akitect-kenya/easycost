@@ -14,11 +14,11 @@ class GoodsTableSeeder extends Seeder
             'name' => 'Savoury',
             'goods' => [
                 [
-                    'name' => 'Royco beef tiny cubes',
+                    'name' => 'Royco beef cubes',
                     'skus' => ['4g' => '95']
                 ],
                 [
-                    'name' => 'Knorr beef tiny cubes',
+                    'name' => 'Knorr beef cubes',
                     'skus' => ['4g' => '95']
                 ],
                 [
@@ -34,15 +34,15 @@ class GoodsTableSeeder extends Seeder
                     'skus' => ['200g' => '99', '500gm' => '240']
                 ],
                 [
-                    'name' => 'Knorr chicken',
+                    'name' => 'Knorr chicken cubes',
                     'skus' => ['15g' => '75']
                 ],
                 [
-                    'name' => 'Knorr beef',
+                    'name' => 'Knorr beef cubes',
                     'skus' => ['15g' => '75']
                 ],
                 [
-                    'name' => 'Knorr beef chilli',
+                    'name' => 'Knorr beef chilli cubes',
                     'skus' => ['15g' => '75']
                 ]
             ]
@@ -72,7 +72,7 @@ class GoodsTableSeeder extends Seeder
                     'skus' => ['25ml' => '25', '50ml' => '50', '100ml' => '99', '250ml' => '185']
                 ],
                 [
-                    'name' => 'Vaseline petroleum cocoa butter rich conditioning jelly',
+                    'name' => 'Vaseline petroleum jelly cocoa butter rich conditioning ',
                     'skus' => ['100ml' => '110', '250ml' => '199']
                 ],
                 [
@@ -92,11 +92,11 @@ class GoodsTableSeeder extends Seeder
                     'skus' => ['100ml' => '110', '200ml' => '185', '400ml' => '350']
                 ],
                 [
-                    'name' => 'Vaseline lotion men repairing moisture cooling men rep fast absorbing',
+                    'name' => 'Vaseline lotion men repairing moisture fast absorbing',
                     'skus' => ['100ml' => '110', '200ml' => '185', '400ml' => '350']
                 ],
                 [
-                    'name' => 'Vaseline lotion dry skin repair yellow',
+                    'name' => 'Vaseline lotion dry skin repair ',
                     'skus' => ['100ml' => '110', '200ml' => '185', '400ml' => '350']
                 ],
                 [
@@ -112,19 +112,19 @@ class GoodsTableSeeder extends Seeder
                     'skus' => ['100ml' => '110', '200ml' => '185', '400ml' => '350']
                 ],
                 [
-                    'name' => 'Geisha Gemiguard calming chamomile and Vit E',
+                    'name' => 'Gemiguard calming chamomile and Vit E',
                     'skus' => ['125g' => '60', '225g' => '90']
                 ],
                 [
-                    'name' => 'Geisha revitalising mint and green tea',
+                    'name' => 'Gemiguard revitalising mint and green tea',
                     'skus' => ['125g' => '60', '225g' => '90']
                 ],
                 [
-                    'name' => 'Geisha refreshing lemon and sunflower',
+                    'name' => 'Gemiguard refreshing lemon and sunflower',
                     'skus' => ['125g' => '60', '225g' => '90']
                 ],
                 [
-                    'name' => 'Geisha soothing neem and basil',
+                    'name' => 'Gemiguard soothing neem and basil',
                     'skus' => ['125g' => '60', '225g' => '90']
                 ],
                 [
@@ -153,23 +153,23 @@ class GoodsTableSeeder extends Seeder
             'name' => 'PWash',
             'goods' => [
                 [
-                    'name' => 'Omo extra fresh for fabric conditioner',
+                    'name' => 'Omo extra fresh of fabric conditioner',
                     'skus' => ['100g' => '30', '200g' => '65', '500g' => '165', '1kg' => '290', '3.5kg' => '950']
                 ],
                 [
-                    'name' => 'Omo original',
+                    'name' => 'Omo Original',
                     'skus' => ['100g' => '30', '200g' => '65', '500g' => '165', '1kg' => '290', '3.5kg' => '950']
                 ],
                 [
-                    'name' => 'Sunlight pink powder tropical sensations',
+                    'name' => 'Sunlight tropical sensations',
                     'skus' => ['100g' => '20', '200g' => '65', '500g' => '165', '1kg' => '290', '3.5kg' => '790', '3.5kg bucket' => '860']
                 ],
                 [
-                    'name' => 'Sunlight yellow powder spring sensations',
+                    'name' => 'Sunlight spring sensations',
                     'skus' => ['100g' => '20', '200g' => '65', '500g' => '165', '1kg' => '290', '3.5kg' => '790', '3.5kg bucket' => '860']
                 ],
                 [
-                    'name' => 'Sunlight orange powder sunrise sensations',
+                    'name' => 'Sunlight sunrise sensations',
                     'skus' => ['100g' => '20', '200g' => '65', '500g' => '165', '1kg' => '290', '3.5kg' => '790', '3.5kg bucket' => '860']
                 ],
             ]
