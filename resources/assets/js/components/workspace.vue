@@ -371,7 +371,7 @@
 
                             <tr>
                                 <td>
-                                    <input v-model="newProduct.date" name="date" id="costingDate" type="date" class="form-control field">
+                                    <input v-model="newProduct.date" name="date" max="2016-11-22" id="costingDate" type="date" class="form-control field">
                                 </td>
                                 <td>
                                     <select v-model="newProduct.sku" name="sku" id="sku" class="form-control field">
