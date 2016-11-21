@@ -12,11 +12,11 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('font-awesome/css/font-awesome.css') }}">
     <link href="{{ asset('css/layout.css') }}" rel="stylesheet">
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
-    <script src="https://use.fontawesome.com/2a9575154c.js"></script>
     <script>
         window.Laravel = <?php echo json_encode([
             'csrfToken' => csrf_token(),
@@ -102,6 +102,6 @@
     </div>
 
     <!-- Scripts -->
-    <script src="/js/app.js"></script>
+        <script src="/js/app.js"></script>
 </body>
 </html>

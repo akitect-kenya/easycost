@@ -1,4 +1,6 @@
 <script>
+    var moment = require('moment');
+
     export default{
         mounted() {
             this.departments();
@@ -31,9 +33,9 @@
                     "products": []
                 },
                 newProduct: {
-                    "date": "",
+                    "date": moment().format('YYYY-MM-DD'),
                     "sku": "",
-                    "number_produced": 0,
+                    "number_produced": 1,
                     "batch_no": "",
                     "cost": 0,
                     "product_name": ""
@@ -98,21 +100,23 @@
             },
 
             addProduct(product) {
-                this.$http.get('/api/goods/' + this.currentGood.id + '/skus/' + product.sku).then((response) => {
-                    var sku = response.body;
-                    product.sku = sku.size
-                    product.product_name = this.currentGood.name
-                    product.cost = this.cost(product.number_produced, sku.prize);
-                    this.newSheet.products.push(product);
-                    this.newProduct = {
-                        "date": "",
-                        "sku": "",
-                        "number_produced": 0,
-                        "batch_no": "",
-                        "cost": 0,
-                        "product_name": ""
-                    }
-                });
+                if(this.costingActionClass.disabled == false) {
+                    this.$http.get('/api/goods/' + this.currentGood.id + '/skus/' + product.sku).then((response) => {
+                        var sku = response.body;
+                        product.sku = sku.size
+                        product.product_name = this.currentGood.name
+                        product.cost = this.cost(product.number_produced, sku.prize);
+                        this.newSheet.products.push(product);
+                        this.newProduct = {
+                            "date": moment().format('YYYY-MM-DD'),
+                            "sku": "",
+                            "number_produced": 1,
+                            "batch_no": "",
+                            "cost": 0,
+                            "product_name": ""
+                        }
+                    });
+                }
             },
 
             removeProduct(product) {
@@ -360,14 +364,14 @@
                                 <td>{{ product.cost }}</td>
                                 <td>
                                     <button @click="removeProduct(product)" class="btn btn-danger">
-                                        <i class="fa fa-trash" aria-hidden="true"></i>
+                                        <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
                                     </button>
                                 </td>
                             </tr>
 
                             <tr>
                                 <td>
-                                    <input v-model="newProduct.date" name="date" id="date" type="date" class="form-control field">
+                                    <input v-model="newProduct.date" name="date" id="costingDate" type="date" class="form-control field">
                                 </td>
                                 <td>
                                     <select v-model="newProduct.sku" name="sku" id="sku" class="form-control field">
@@ -376,7 +380,7 @@
                                     </select>
                                 </td>
                                 <td>
-                                    <input v-model="newProduct.number_produced" name="number" id="number" type="number" class="form-control field">
+                                    <input v-model="newProduct.number_produced" min="1" name="number" id="number" type="number" class="form-control field">
                                 </td>
                                 <td>
                                     <input v-model="newProduct.batch_no" name="batchNo" id="batchNo" type="text" class="form-control field">
@@ -386,7 +390,7 @@
                                 </td>
                                 <td>
                                     <button :class="costingActionClass" @click="addProduct(newProduct)" class="btn btn-primary">
-                                        <i class="fa fa-check" aria-hidden="true"></i>
+                                        <i class="glyphicon glyphicon-ok" aria-hidden="true"></i>
                                     </button>
                                 </td>
                             </tr>
