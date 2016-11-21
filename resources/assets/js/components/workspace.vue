@@ -10,6 +10,7 @@
 
         data() {
             return {
+                moment: moment(),
                 productPackage: 20,
                 directLabourCost: 40,
                 purchaseOrders: 9400,
@@ -371,7 +372,7 @@
 
                             <tr>
                                 <td>
-                                    <input v-model="newProduct.date" name="date" max="2016-11-22" id="costingDate" type="date" class="form-control field">
+                                    <input v-model="newProduct.date" name="date" :max="moment.format('YYYY-MM-DD')" id="costingDate" type="date" class="form-control field">
                                 </td>
                                 <td>
                                     <select v-model="newProduct.sku" name="sku" id="sku" class="form-control field">
